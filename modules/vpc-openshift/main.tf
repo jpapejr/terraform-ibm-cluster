@@ -3,6 +3,16 @@
 # Copyright 2020 IBM
 #####################################################
 
+terraform {
+  required_providers {
+    ibm = {
+      source = "IBM-Cloud/ibm"
+      version = "~> 1.20.0"
+    }
+  }
+}
+
+
 resource "ibm_container_vpc_cluster" "cluster" {
 
         name                            = var.cluster_name
